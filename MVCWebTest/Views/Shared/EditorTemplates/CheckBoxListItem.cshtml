@@ -1,0 +1,8 @@
+﻿@model MVCWebTest.ViewModels.CheckBoxListItem
+
+    @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.Display)
+
+    @Html.CheckBoxFor(x => x.IsChecked)
+    @Html.Label(Model.Display)
+<br />

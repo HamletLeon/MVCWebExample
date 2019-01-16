@@ -1,0 +1,13 @@
+﻿@model MVCWebTest.Models.PhoneNumber
+
+<li style="padding-bottom:15px">
+    @using (MVCWebTest.Helpers.HtmlHelper.BeginCollectionItem(Html, "PhoneNumbers"))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.LabelFor(m => m.Value, new { @style = "margin-right:10px;" })
+        @Html.EditorFor(m => m.Value)
+        @Html.ValidationMessageFor(m => m.Value, "", new { @class = "text-danger" })
+
+        <a href="#" onclick="$(this).parent().remove();" style="margin-left:10px;">Delete</a>
+    }
+</li>
